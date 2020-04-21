@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <script src="csvjson.json"></script>
+    </head>
+
+    <body>
+        <h1>See my data</h1>
+        <div id="mydata"></div>
+        
+        <canvas id="myCanvas" width="800" height="400" style="border:1px solid #d3d3d3;"></canvas>
+        
+    </body>
+   
+    <script>
+        
+        getData();
+        drawGraph();
+        
+        function getData() {
+            var mydiv = document.getElementById("mydata");
+            mydiv.innerHTML = data[0]['GeoAreaName'] + " " + data[0]['Value'] + "%";
+            
+        }
+        
+        function drawGraph() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            
+            // draw some values * 10
+            ctx.fillStyle = "red";
+            ctx.fillRect(10,10,data[0]['Value'] * 10,50);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(10,80,data[49]['Value'] * 10,50);
+        }
+        
+    </script>
+
+
+</html>
