@@ -5,7 +5,7 @@
 # Korea, South - Bahamas, The - Gambia, The : Must be manually fixed in the data (South Korea, Bahamas, Gambia) 
 
 # Read file in
-fi = open("03-22-2020.csv","r")
+fi = open("04-30-2020.csv","r")
 fi.readline() # skip over first title line
 datarows = fi.readlines()
 fi.close()
@@ -18,16 +18,16 @@ count = 0 # count number of circles
 # loop through all rows in the csv file
 for line in datarows:
 	templist = line.split(",")
-	prov = templist[0]
-	country = templist[1]
-	confirmed = templist[3]
-	deaths = templist[4]
-	recover = templist[5]
-	lat = templist[6]
-	lon = templist[7]
+	prov = templist[2]
+	country = templist[3]
+	confirmed = templist[6]
+	deaths = templist[7]
+	recover = templist[8]
+	lat = templist[4]
+	lon = templist[5]
 
 	# make radius of circle bigger for cartographic appeal
-	recoverradius = int(recover) * 50
+	recoverradius = int(recover) * 10
 	
 	if (int(recover) > 0):
 		if (prov != ""):
