@@ -29,7 +29,7 @@ for line in datarows:
 	# make radius of circle bigger for cartographic appeal
 	confirmedradius = int(confirmed) * 10
 	
-	if (int(recover) > 0):
+	if (int(confirmed) > 0):
 		if (prov != ""):
 			marker = "L.circle([" + lat + "," + lon + "],{color:'red',fillColor:'#f03',fillOpacity:0.5,radius:" + str(confirmedradius) + "}).addTo(map).bindPopup('" + prov.replace("'", "") + "," + country.replace("'","") + " : " + recover + "')"	
 		else:
