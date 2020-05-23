@@ -33,7 +33,7 @@ for line in datarows:
 		if (prov != ""):
 			marker = "L.circle([" + lat + "," + lon + "],{color:'red',fillColor:'#f03',fillOpacity:0.5,radius:" + str(deathsradius) + "}).addTo(map).bindPopup('" + prov.replace("'", "") + "," + country.replace("'","") + " : " + recover + "')"	
 		else:
-			marker = "L.circle([" + lat + "," + lon + "],{color:'red',fillColor:'#f03',fillOpacity:0.5,radius:" + str(deathsradius) + "}).addTo(map).bindPopup('" + country.replace("'", "") + " : " + recover + "')"
+			marker = "L.circle([" + lat + "," + lon + "],{color:'red',fillColor:'#f03',fillOpacity:0.5,radius:" + str(deathradius) + "}).addTo(map).bindPopup('" + country.replace("'", "") + " : " + recover + "')"
 
 		fo.write(marker + "\n")
 		count = count + 1
